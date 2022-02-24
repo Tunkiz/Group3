@@ -7,6 +7,7 @@ public class LotteryMachine {
     public static void main(String[] args) {
         System.out.println("Insert your lucky numbers:");
         int userLucky[] = new int[6];
+        int numbers[] = new int[49];
         Scanner me = new Scanner(System.in);
         
         for (int i = 0; i < userLucky.length; i++) {
@@ -14,10 +15,14 @@ public class LotteryMachine {
             userLucky[i] = userIn;
         }
         
+        for (int i = 1; i < numbers.length; i++) {
+            numbers[i] = i;
+        }
+        
         int luckyNumbers[] = new int[6];
         Random rand = new Random();
         for (int i = 0; i < luckyNumbers.length; i++) {
-            luckyNumbers[i] = rand.nextInt(49);
+            luckyNumbers[i] = numbers[rand.nextInt(49)];
         }
         
         int count =0;
