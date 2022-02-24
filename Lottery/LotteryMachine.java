@@ -52,7 +52,7 @@ public class LotteryMachine {
             System.out.println("You won R10 000");
         }
         else if (count == 5){
-            System.err.println("You won R100 000");
+            System.out.println("You won R100 000");
         }
         else{
             System.out.println("Congradulations!!!!! you won the won the jackpot of R1000 000");
