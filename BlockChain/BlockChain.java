@@ -19,7 +19,7 @@ public class BlackChain {
         // First of all we instantiate the BlockChain class itself.
         BlockChain blockChain = new BlockChain();
         // we will instantiate the Miner class to fetch the minor object.
-        Miner miner = new Miner();
+        BlockAdd miner = new BlockAdd();
 
 
         InsurancePay ip1 = new InsurancePay("Tunkis", true, new Date(),20000);
@@ -184,7 +184,7 @@ class BlockChain {
     }
 
 }
-class Miner {
+class BlockAdd {
 
     public void mine(Block block, BlockChain blockChain) {
 
@@ -194,8 +194,8 @@ class Miner {
             block.incrementNonce();
         }
 
-        System.out.println(block+" has just mined...");
-        System.out.println("Hash is: "+block.getHash());
+        
+        
         //appending the block to the blockchain
         blockChain.addBlock(block);
         
