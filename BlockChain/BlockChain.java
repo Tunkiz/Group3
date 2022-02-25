@@ -19,22 +19,21 @@ public class BlockChain {
      */
         public String hash;
 	public String previousHash;
-	private final String data; //our data will be medical records.
+	private final String transactions; //our data will be medical records.
 	private final long timeStamp;
 
 	//Block Constructor.
-	public BlockChain(String data,String previousHash ) {
-		this.data = data;
+	public BlockChain(String transactions,String previousHash ) {
+		this.transactions = transactions;
 		this.previousHash = previousHash;
 		this.timeStamp = new Date().getTime();
                 this.hash = calculateHash();
 	}
         
         public String calculateHash() {
-	String calculatedhash = applySha256( 
-			previousHash +
+	String calculatedhash = applySha256(previousHash +
 			Long.toString(timeStamp) +
-			data 
+			transactions 
 			);
 	return calculatedhash;
         }
@@ -43,7 +42,7 @@ public class BlockChain {
 			MessageDigest digest = MessageDigest.getInstance("SHA-256");	        
 			//Applies sha256 to our input, 
 			byte[] hash = digest.digest(input.getBytes("UTF-8"));	        
-			StringBuilder hexString = new StringBuilder(); 
+			StringBuilder hexString = new StringBuilder(); // This will contain hash as hexidecimal
 			for (int i = 0; i < hash.length; i++) {
 				String hex = Integer.toHexString(0xff & hash[i]);
 				if(hex.length() == 1) hexString.append('0');
