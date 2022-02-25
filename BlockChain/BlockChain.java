@@ -15,13 +15,13 @@ public class BlockChain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-                Block genesisBlock = new Block("medical_history,treatments_received, test_results, diagnoses, and medications_taken", "0");
+                Block genesisBlock = new Block("0000", "0");
 		
                 System.out.println("Hash for block 1 : " + genesisBlock.hash);
-		Block secondBlock = new Block("Yo im the second block",genesisBlock.hash);
+		Block secondBlock = new Block("medical_history,treatments_received, test_results, diagnoses, and medications_taken",genesisBlock.hash);
 		System.out.println("Hash for block 2 : " + secondBlock.hash);
 		
-		Block thirdBlock = new Block("Hey im the third block",secondBlock.hash);
+		Block thirdBlock = new Block("medical_history,treatments_received, test_results, diagnoses, and medications_taken",secondBlock.hash);
 		System.out.println("Hash for block 3 : " + thirdBlock.hash);
     }
     
