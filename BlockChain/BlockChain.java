@@ -56,7 +56,7 @@ public class BlockChain {
 	}
         
     public static void main(String[] args) {
-                BlockChain genesisBlock = new BlockChain("medical_history,treatments_received, test_results, diagnoses, and medications_taken", "0");
+                BlockChain genesisBlock = new BlockChain(" ", "0");
 		
                 System.out.println("Hash for block 1 : " + genesisBlock.hash);
 		BlockChain secondBlock = new BlockChain("medical_history,treatments_received, test_results, diagnoses, and medications_taken",genesisBlock.hash);
