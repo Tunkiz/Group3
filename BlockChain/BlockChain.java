@@ -19,8 +19,8 @@ public class BlockChain {
      */
         public String hash;
 	public String previousHash;
-	private final String data; //our data will be a simple message.
-	private final long timeStamp; //as number of milliseconds since 1/1/1970.
+	private final String data; //our data will be medical records.
+	private final long timeStamp;
 
 	//Block Constructor.
 	public BlockChain(String data,String previousHash ) {
@@ -43,7 +43,7 @@ public class BlockChain {
 			MessageDigest digest = MessageDigest.getInstance("SHA-256");	        
 			//Applies sha256 to our input, 
 			byte[] hash = digest.digest(input.getBytes("UTF-8"));	        
-			StringBuilder hexString = new StringBuilder(); // This will contain hash as hexidecimal
+			StringBuilder hexString = new StringBuilder(); 
 			for (int i = 0; i < hash.length; i++) {
 				String hex = Integer.toHexString(0xff & hash[i]);
 				if(hex.length() == 1) hexString.append('0');
