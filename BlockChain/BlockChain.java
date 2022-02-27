@@ -173,7 +173,7 @@ public final class BlockChain {
     
     public static void main(String[] args) {
         Clients clientOne = new Clients("Tunkis", "1235", "Addict", "Positive", "D1", "M1");
-        Clients clientTwo = new Clients("Tunkis", "1235", "Addict", "Positive", "D1", "M1");
+        Clients clientTwo = new Clients("Sipho", "235", "Addict", "Positive", "D1", "M1");
         Clients clientThree = new Clients("Tunkis", "1235", "Addict", "Positive", "D1", "M1");
         Clients clientFour = new Clients("Tunkis", "1235", "Addict", "Positive", "D1", "M1");
         Clients clientFive = new Clients("Tunkis", "1235", "Addict", "Positive", "D1", "M1");
